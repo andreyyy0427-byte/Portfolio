@@ -1,0 +1,92 @@
+/* Global styles. Colors are stored as variables so you can change the theme in one place. */
+:root {
+    --board: #eef1ea;
+    --paper: #fbfcf9;
+    --ink: #13201a;
+    --muted: #4d5d54;
+    --mask: #145a3f;   /* circuit board green */
+    --copper: #b8692f; /* copper trace accent */
+    --line: #cdd5c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    line-height: 1.65;
+    background-color: var(--board);
+    /* small dots, like the holes on a breadboard */
+    background-image: radial-gradient(var(--line) 1.4px, transparent 1.4px);
+    background-size: 24px 24px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--mask);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--copper);
+    outline-offset: 3px;
+}
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+.panel {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--copper);
+    border-radius: 6px;
+    padding: 20px 24px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0 8px 8px 0;
+    border: 1px solid var(--mask);
+    border-radius: 999px;
+    font-size: 0.9rem;
+    color: var(--mask);
+    background: var(--paper);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--mask);
+}
+
+.button.primary {
+    background: var(--mask);
+    color: #fff;
+}
+
+.button.secondary {
+    color: var(--mask);
+    background: transparent;
+}
+
+.button:hover {
+    background: var(--copper);
+    border-color: var(--copper);
+    color: #fff;
+}
