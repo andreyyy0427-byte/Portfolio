@@ -112,9 +112,4 @@ export const socialLinks: SocialLink[] = [
         handle: '@lmaoxdapm',
         url: 'https://www.tiktok.com/@lmaoxdapm',
     },
-    {
-        name: 'OnlyFans',
-        handle: '@u390761402',
-        url: 'https://onlyfans.com/u390761402',
-    },
 ]
